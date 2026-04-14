@@ -1112,11 +1112,20 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
   .container { padding: 0 24px; }
-  .nav { padding: 0 24px; }
+  .nav { padding: 0 20px; }
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
-  .hero-content { padding: 0 24px; }
-  .hero-stripe, .hero-stripe-thin { display: none; }
+  .hero-content { padding: 0 20px; }
+  .hero-stripe, .hero-stripe-thin, .hero-stripe-silver { display: none; }
+  .hero-title { font-size: clamp(56px, 12vw, 80px); letter-spacing: 2px; }
+  .hero-tagline { font-size: 18px; letter-spacing: 4px; }
+  .hero-sub { font-size: 16px; line-height: 1.6; margin-top: 16px; }
+  .hero-buttons { flex-direction: column; gap: 12px; margin-top: 32px; }
+  .hero-buttons .btn { width: 100%; justify-content: center; }
+  .hero-flag { width: 48px; margin-bottom: 20px; }
+  .hero-flag-row { height: 9px; }
+  .hero-flag-full { height: 9px; }
+  .hero-divider { width: 60px; height: 3px; margin: 16px 0; }
   .services-featured, .services-grid, .portfolio-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
   .stat-item:nth-child(2)::after { display: none; }
@@ -1126,6 +1135,26 @@ img { max-width: 100%; display: block; }
   .footer-links-grid { gap: 36px; flex-wrap: wrap; }
   .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
   .portfolio-header { flex-direction: column; gap: 16px; align-items: flex-start; }
+  .section-title { font-size: clamp(32px, 8vw, 48px); }
+  .section-desc { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .nav { padding: 0 16px; height: 64px; }
+  .nav-logo { font-size: 18px; }
+  .nav-flag { width: 26px; }
+  .nav-flag-row { height: 5px; }
+  .nav-flag-full { height: 5px; }
+  .hero-content { padding: 0 16px; }
+  .hero-title { font-size: clamp(44px, 14vw, 64px); }
+  .hero-tagline { font-size: 14px; letter-spacing: 3px; }
+  .hero-sub { font-size: 15px; }
+  .hero-scroll { display: none; }
+  .stats-grid { grid-template-columns: 1fr; gap: 24px; }
+  .stat-number { font-size: 48px; }
+  .section-label { font-size: 12px; letter-spacing: 3px; }
+  .section-label::before { width: 20px; }
 }
 </style>
 </head>
